@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.attraya</groupId>
-	<artifactId>book-my-show</artifactId>
+	<artifactId>book-my-show-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>book-my-show</name>
+	<name>book-my-show-provider</name>
 	<description>A sample Rest API for Book my Show</description>
 	<properties>
 		<java.version>17</java.version>
