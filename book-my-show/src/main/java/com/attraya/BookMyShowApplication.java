@@ -19,20 +19,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("bookmyshow/service")
+@RequestMapping("bookmyshow-provider")
 public class BookMyShowApplication {
 
     @Autowired
     private BookMyShowRepository repository;
 
-    @PostMapping("/bookingShow")
+    @PostMapping("/book")
     public String bookShow(@RequestBody BookRequest bookRequest) {
         BookRequest response = repository.save(bookRequest);
         return "Hi " + response.getUserName() + "! Your request for " + response.getShowName() + " on date "
                 + response.getBookingTime() + " booked successfully...:)";
     }
 
-    @GetMapping("/getAllBooking")
+    @GetMapping("/getAllBookings")
     public List<BookRequest> getAllBooking() {
         return repository.findAll();
     }
